@@ -1,0 +1,13 @@
+# DO NOT STORE YOUR CREDENTIALS INTO GIT
+apiVersion: v1
+kind: ConfigMap
+data:
+  AWS_BUCKET: udagram-519772274057-dev
+  AWS_PROFILE: default
+  AWS_REGION: eu-west-2
+  JWT_SECRET: sjrgbw8y342f4fh47
+  POSTGRESS_DB: udagram
+  POSTGRESS_HOST: udagram.cg7ezb6zfiu9.eu-west-2.rds.amazonaws.com
+  URL: http://localhost:8100  
+metadata:
+  name: env-config
