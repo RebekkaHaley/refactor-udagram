@@ -44,3 +44,4 @@ The integration of Docker images is handled through:
 ### Resources used:
 - [Why isnt "kubectl apply" working?](https://stackoverflow.com/questions/60379799/host-not-found-in-upstream-when-using-kubectl-apply-f-but-works-in-doc)
 - [How to fix "invalid ELF header" with Docker and Bcrypt](https://medium.com/@devontem/solved-invalid-elf-header-with-docker-and-bcrypt-444426d63605)
+- [Continuous delivery to Kubernetes with Travis CI](https://caveofcode.com/continuous-delivery-to-kubernetes-with-travis-ci/)
