@@ -25,7 +25,7 @@ Setting up the k8s cluster can be done either via the AWS console or through com
 3. Set up [kubeconfig](https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html)
 4. Load YAML files: `kubectl apply -f udacity-c3-deployment/k8s`, to create deployment and service
 
-### Port-forward using k8s services
+### Serve Application via port-forward
 Once the EKS cluster is populated with services and deployments, it is possible to serve the application on localhost by:
 
 1. Run `kubectl port-forward service/reverseproxy 8080:8080`
