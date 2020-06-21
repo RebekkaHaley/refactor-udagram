@@ -1,4 +1,4 @@
-# Udagram Image Filtering Microservice
+# Refactored Udagram Microservice
 
 ## Introduction
 
@@ -6,9 +6,8 @@ Udagram is a simple cloud application developed alongside the Udacity Cloud Engi
 
 The project is split into three parts:
 1. [The Simple Frontend](/udacity-c3-frontend)
-A basic Ionic client web application which consumes the RestAPI Backend. 
-2. [The RestAPI Feed Backend](/udacity-c3-restapi-feed), a Node-Express feed microservice.
-3. [The RestAPI User Backend](/udacity-c3-restapi-user), a Node-Express user microservice.
+2. [The RestAPI Feed Backend](/udacity-c3-restapi-feed)
+3. [The RestAPI User Backend](/udacity-c3-restapi-user)
 
 ## Instructions
 
@@ -26,7 +25,7 @@ Setting up the k8s cluster can be done either via the AWS console or through com
 1. Create an EKS cluster (as well as node groups) via the AWS console
 2. The following tools must be installed: [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) and [aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html)
 3. Set up [kubeconfig](https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html)
-4. Load the YAML files from: `kubectl apply -f udacity-c3-deployment/k8s`, to create deployment and service
+4. Load YAML files: `kubectl apply -f udacity-c3-deployment/k8s`, to create deployment and service
 
 ### Port-forward using k8s services
 Once the EKS cluster is populated with services and deployments, it is possible to serve the application on localhost by:
@@ -35,12 +34,12 @@ Once the EKS cluster is populated with services and deployments, it is possible 
 2. Run `kubectl port-forward service/frontend 8100:8100`
 
 ### TravisCI
-If changes need to be made to the features:
+The integration of Docker images is handled through:
 
-1. Make changes to the code and commit
+1. Change git repo code and commit
 2. Run `git push` to trigger the ci/cd-pipeline
-3. The pipeline will re-build all the latest images and push them to [this docker hub](ttps://hub.docker.com/u/rebekkahaley)
-4. Currently, the EKS cluster will need to be manually updated via: `kubectl apply -f udacity-c3-deployment/k8s`
+3. The pipeline will re-build all the latest images and push them to [this docker hub](https://hub.docker.com/u/rebekkahaley)
+4. Currently, EKS cluster will need to be manually updated with the latest images: `kubectl apply -f udacity-c3-deployment/k8s`
 
 ## Appendix
 
