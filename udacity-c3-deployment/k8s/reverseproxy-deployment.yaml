@@ -12,7 +12,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-      - image: scheele/reverseproxy
+      - image: rebekkahaley/reverseproxy
         name: reverseproxy
         imagePullPolicy: Always          
         resources:
@@ -25,5 +25,3 @@ spec:
         ports:
         - containerPort: 8080
       restartPolicy: Always
-
-
